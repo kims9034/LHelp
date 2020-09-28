@@ -76,8 +76,15 @@ namespace HELP
         private bool saveCheck0m = false;
 
 
+
         private string curProgramVersion = "";
         private string upProgramVersion = "";
+
+
+        //
+        BossTimer bTimer;
+
+
 
         public Form1()
         {
@@ -132,6 +139,10 @@ namespace HELP
 
             saveTopPos = stRect.top;
             saveLeftPos = stRect.left;     
+
+
+             bTimer = new BossTimer();
+
         }
 
         
@@ -152,6 +163,7 @@ namespace HELP
                 {
                     ti_Timer = 0;
                     TimerUpdate();
+                    bTimer.Update();
                 }
             }
 
